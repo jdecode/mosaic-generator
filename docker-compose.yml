@@ -1,0 +1,45 @@
+version : "3"
+services:
+  mosaic-app:
+    image: jdecode/php:8x-gd-jpeg-myi
+    container_name: mosaic-app
+    depends_on:
+      - mosaic-db
+    volumes:
+      - .:/var/www/html
+    restart: always
+    ports:
+      - "2345:80"
+    environment:
+      APP_NAME: "Mosaic"
+    networks:
+      mosaic-network:
+        ipv4_address: 23.45.1.1
+
+  mosaic-db:
+    image: mysql:8
+    container_name: mosaic-db
+    volumes:
+      - mosaic-my-disk:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mosaic
+      MYSQL_DATABASE: mosaic
+      MYSQL_USER: mosaic
+      MYSQL_PASSWORD: mosaic
+    networks:
+      mosaic-network:
+        ipv4_address: 23.45.1.2
+
+
+# On-disk storage of DB data, when containers are stopped
+volumes:
+  mosaic-my-disk: {}
+
+# Local network for services running using this docker-compose config
+networks:
+  mosaic-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 23.45.0.0/16
