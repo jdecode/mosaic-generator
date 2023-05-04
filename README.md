@@ -56,7 +56,7 @@ You may need to tweak your php config and increase `max_execution_time` and/or `
 
 This is what an outpout looks like:
 
-![demo](https://github.com/jdecode/mosaic-generator/raw/master/examples/output-demo.jpg)
+![demo](https://github.com/jdecode/mosaic-generator/raw/main/examples/output-demo.jpg)
 
 256 rows and 256 columns.
 10.000 pictures were used
