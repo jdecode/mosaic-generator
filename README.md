@@ -16,7 +16,7 @@ Setup changes:
    1. This will start PHP and MySQL containers
    1. MySQL server host is `23.45.1.2`
    2. Username, password, and database name are `mosaic`
-1. Create the table [If someone knows how to do this in Docker, please create a PR]
+1. Create the table [ TODO: Create entrypoint script to do this]
     ```sql
         CREATE TABLE IF NOT EXISTS `thumbnails` (
           `filename` varchar(255) NOT NULL,
