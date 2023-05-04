@@ -41,7 +41,7 @@ From command line:
 --input                  path to the original picture that shall be recreated
 --rows                   number of thumbnails to create per row
 --columns                number of thumbnails to create per column
---no-thumbs (optional)   won't (re)generate thumbnails before creating mosaic.
+--no-thumbs (optional)   will not (re)generate thumbnails
 ```
 
 ...Directly from class:
