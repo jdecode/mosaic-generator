@@ -2,9 +2,9 @@
 
 ## Mosaic generator using PHP, GD, MySQL
 
-_Forked from [`eflorit/mosaic-generator`](https://github.com/eflorit/mosaic-generator) (In case it wasn't obvious)_
+_Forked from [`eflorit/mosaic-generator`](https://github.com/eflorit/mosaic-generator) (and quite a lot is updated)_
 
-Key changes:
+Setup changes:
  - Add Docker support
  - Use PHP 8.x
  - Use MySQL 8.x
